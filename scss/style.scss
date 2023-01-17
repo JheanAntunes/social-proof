@@ -1,0 +1,314 @@
+@charset "UTF-8"; 
+@import "fontes.scss";
+@import "variaveis.scss";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body{
+    background-color: Light-Grayish-Magenta;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: White;
+    width: 80%;
+}
+
+
+section.sctn-texto-estrela{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        padding: 1rem;
+        text-align: center;
+        font-size: 2rem;
+        font-family: $fonte-400-500-700;
+        font-weight: 700;
+        color: $Very-Dark-Magenta;
+        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.315);
+    }
+
+    p{
+        padding: .8rem;
+        text-align: center;
+        font-family: $fonte-400-500-700;
+        font-weight: 400;
+        font-size: 17px;
+        color: $Dark-Grayish-Magenta;
+        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.245);    
+    }
+
+    div.carde{
+        width: 100%;
+    }
+
+    div.mini-card{
+        background-color: $Light-Grayish-Magenta;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0px;
+        padding: .5rem;
+        border-radius: 10px;
+        width: 100%;
+        //estrelas horizontal
+        ul{display: flex;}
+
+        h2{
+            padding: 10px;
+            font-family: $fonte-400-500-700;
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: $Very-Dark-Magenta;
+            text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.315);
+        }
+        /*abaixo se querer mudar algo nas 3*/
+        &.review{
+            width: 90%;
+        }
+
+         &.report{
+            width: 90%;
+       }
+
+        &.best-tech{
+            width: 90%;
+        }
+    }//fim da div
+}
+
+/*Segunda section com  card de comentários*/
+
+section.sctn-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    div.card{
+        margin: 1rem 0px;
+        width: 100%;
+        height: 250px;
+        background-color: $Very-Dark-Magenta;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        /*o que está dentro da div.card*/
+        
+        div.imagem-pessoas{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            img{
+                border-radius: 50px;
+                width: 50px;
+            }
+
+            div.texto{
+                color: white;
+                padding-left: 1rem;
+                h2{
+                    font-family: $fonte-400-500-700;
+                    font-weight: 500;
+                    font-size: 1.1rem;
+                } //fim h2
+
+                span{
+                    color: $Soft-Pink;
+                    font-family: $fonte-400-500-700;
+                    font-weight: 400;
+                } //fim do span
+            } //fim da div.colton
+
+        }//fim da div.imagem-colton
+        p{
+        padding-top: 1rem;
+        font-family: $fonte-400-500-700;
+        font-weight: 400;
+        font-size: 15px;
+        color: $White;
+        line-height: 16px;
+        }
+    } //fim da div card
+} // fim da section 
+
+/*media query*/
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    main{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    section.sctn-texto-estrela{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    section.sctn-texto-estrela h2{
+        text-align: center;
+       padding: 1rem 1rem;
+       font-size: 2.3rem;
+       width: 390px;
+    }
+
+    section.sctn-texto-estrela p{
+        text-align: center;
+        margin: 1rem;
+        width: 80%;
+        font-size: 1.3rem;
+    }
+
+    .mini-card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .review1{
+        padding: 2px;
+        width: 40%;
+    }
+
+    #report1{
+        margin-left: 1.5rem;
+        padding: 2px;
+    }
+
+    #best-tech1{
+        margin-left: 2.5rem;
+        padding: 2px;
+    }
+
+    section.sctn-texto-estrela div.mini-card{
+        padding: 4px;
+    }
+
+    section.sctn-texto-estrela div.mini-card h2{
+        padding: 5px;
+    }
+
+    section.sctn-texto-estrela div.mini-card.review{
+        width: 90%;
+    }
+
+    .mini-width{
+        width: 350px;
+    }
+   
+    section.sctn-card{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        div.card{
+            margin: 0rem 1rem;
+
+            &.card-2{
+                margin: 1rem;
+            }
+
+            &.card-3{
+                margin: 2rem 1rem;
+            }
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+   
+    main{
+        width: 80%;
+    }
+
+    section.sctn-texto-estrela{
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 1rem;
+    }
+
+    section.sctn-texto-estrela h2{
+        text-align: center;
+       padding: 0px 1rem;
+       font-size: 2.3rem;
+       width: 380px;
+    }
+
+    section.sctn-texto-estrela p{
+        text-align: left;
+        margin-top: 1rem;
+        width: 70%;
+        font-size: 1.3rem;
+    }
+
+    .mini-card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .review1{
+        padding: 2px;
+    }
+
+    #report1{
+        margin-left: 1.5rem;
+        padding: 2px;
+    }
+
+    #best-tech1{
+        margin-left: 3rem;
+        padding: 2px;
+    }
+
+    section.sctn-texto-estrela div.mini-card{
+        padding: 4px;
+    }
+
+    section.sctn-texto-estrela div.mini-card h2{
+        padding: 5px;
+    }
+
+    section.sctn-texto-estrela div.mini-card.review{
+        width: 90%;
+    }
+
+    .mini-width{
+        width: 400px;
+    }
+   
+    section.sctn-card{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        div.card{
+            margin: 0rem 1rem;
+
+            &.card-2{
+                margin: 1rem;
+            }
+
+            &.card-3{
+                margin: 2rem 1rem;
+            }
+        }
+    }
+ }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
